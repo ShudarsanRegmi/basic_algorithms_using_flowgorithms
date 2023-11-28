@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:34:17 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjE5OjMxIEFNOzMzNDQ="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjM0OjE3IEFNOzc7MzQ1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="alphabets" type="String" array="True" size="26"/>
+            <declare name="n, i, j" type="Integer" array="False" size=""/>
+            <for variable="i" start="65" end="90" direction="inc" step="1">
+                <assign variable="alphabets[i-65]" expression="ToChar(i)"/>
+            </for>
+            <for variable="i" start="0" end="25" direction="inc" step="1">
+                <for variable="j" start="0" end="i" direction="inc" step="1">
+                    <output expression="alphabets[j]" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

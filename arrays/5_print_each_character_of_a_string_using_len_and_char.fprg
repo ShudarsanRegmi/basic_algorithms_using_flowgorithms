@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:19:04 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjI5OjM5IEFNOzMzNTI="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjE5OjA0IEFNOzQ7MzQ1NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="naam" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <input variable="naam"/>
+            <output expression="&quot;Your name is &quot;" newline="True"/>
+            <for variable="i" start="0" end="len(naam)-1" direction="inc" step="1">
+                <output expression="char(naam,i)" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

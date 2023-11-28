@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 03:47:01 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjQwOjM3IEFNOzMzNDM="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjQ3OjAxIEFNOzI7MzQ1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="length, i" type="Integer" array="False" size=""/>
+            <input variable="length"/>
+            <declare name="arr" type="Integer" array="True" size="length"/>
+            <for variable="i" start="0" end="length-1" direction="inc" step="1">
+                <output expression="&quot;Enter the element &quot; &amp; i" newline="True"/>
+                <input variable="arr[i]"/>
+            </for>
+            <output expression="&quot;Displaying output&quot;" newline="True"/>
+            <for variable="i" start="0" end="length-1" direction="inc" step="1">
+                <output expression="arr[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:50:35 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjQzOjQxIEFNOzMzNDI="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjUwOjM1IEFNOzM7MzQ1Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arr1, arr2" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="arr1[i]" expression="i"/>
+            </for>
+            <output expression="&quot;Displaying arr1 &quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot; &quot; &amp; arr1[i]" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;Copying elements&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="arr2[i]" expression="arr1[i]"/>
+            </for>
+            <output expression="&quot;Displaying arr2&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot; &quot; &amp; arr2[i]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

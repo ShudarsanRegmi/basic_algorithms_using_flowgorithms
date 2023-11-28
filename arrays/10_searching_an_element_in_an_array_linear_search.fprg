@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:43:35 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjI5OjM5IEFNOzMzNTI="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjQzOjM1IEFNOzc7MzQ1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="found" type="Boolean" array="False" size=""/>
+            <assign variable="found" expression="false"/>
+            <declare name="name" type="String" array="True" size="20"/>
+            <declare name="naam, searchChar" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <input variable="naam"/>
+            <for variable="i" start="0" end="len(naam)-1" direction="inc" step="1">
+                <assign variable="name[i]" expression="char(naam,i)"/>
+            </for>
+            <output expression="&quot;The name is &quot;" newline="True"/>
+            <output expression="&quot;Enter the character you wanna search for &quot;" newline="True"/>
+            <input variable="searchChar"/>
+            <for variable="i" start="0" end="len(naam)-1" direction="inc" step="1">
+                <if expression="name[i] == searchChar">
+                    <then>
+                        <output expression="&quot;Searched Character Found&quot;" newline="True"/>
+                        <assign variable="found" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="!found">
+                <then>
+                    <output expression="&quot;Didn't find in the array !! &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Found !!&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

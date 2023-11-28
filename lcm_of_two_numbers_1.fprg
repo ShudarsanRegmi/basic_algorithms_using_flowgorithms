@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-27 09:27:42 PM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjA3OjU1IFBNOzMzNjY="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjExOjEyIFBNOzE7cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA4OjQ2OjEyIFBNO2V1Y2xpZGlhbl9hbGdvcml0aG1fdG9fZmluZF9nY2Rfb2ZfdHdvX251bWJlcnMuZnByZzsxMjI2MQ=="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjI3OjQyIFBNOzM7MzQ3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, lcm" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="6"/>
+            <assign variable="y" expression="7"/>
+            <assign variable="lcm" expression="(x*y)/gcd(x,y)"/>
+            <output expression="&quot;Lcm = &quot; &amp; lcm" newline="True"/>
+        </body>
+    </function>
+    <function name="gcd" type="Integer" variable="x">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <if expression="a == 0">
+                <then>
+                    <assign variable="x" expression="b"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="b == 0">
+                <then>
+                    <assign variable="x" expression="a"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="a &gt; b">
+                <then>
+                    <assign variable="x" expression="gcd(a-b,b)"/>
+                </then>
+                <else>
+                    <if expression="a == b">
+                        <then>
+                            <assign variable="x" expression="a"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="gcd(a,b-a)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

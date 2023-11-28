@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:15:37 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjA1OjA0IEFNOzMzMzk="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjE1OjM3IEFNOzI7MzQ1NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mychar" type="String" array="False" size=""/>
+            <declare name="ascii" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a character: &quot;" newline="True"/>
+            <input variable="mychar"/>
+            <assign variable="ascii" expression="ToCode(mychar)"/>
+            <if expression="(ascii &gt;= 65 &amp;&amp; ascii &lt;= 90)">
+                <then>
+                    <output expression="&quot;Upper Case&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(ascii &gt;=97 &amp;&amp; ascii &lt;=122)">
+                        <then>
+                            <output expression="&quot;Lower Case&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Enter alphabet only&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

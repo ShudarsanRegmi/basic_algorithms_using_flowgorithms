@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-27 10:06:17 PM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjI3OjQzIFBNOzMzNjU="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzEwOjA2OjE3IFBNOzEyOzM1MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="lenNum(1234)"/>
+            <output expression="x" newline="True"/>
+        </body>
+    </function>
+    <function name="lenNum" type="Integer" variable="length">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="length, count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <while expression="num &gt; 0">
+                <assign variable="num" expression="num / 10"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+            <assign variable="length" expression="count"/>
+        </body>
+    </function>
+    <function name="max" type="Integer" variable="x">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <if expression="a&gt;b">
+                <then>
+                    <assign variable="x" expression="a"/>
+                </then>
+                <else>
+                    <if expression="a == b">
+                        <then>
+                            <assign variable="x" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="b"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="min" type="Integer" variable="x">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <if expression="a &lt; b">
+                <then>
+                    <assign variable="x" expression="b"/>
+                </then>
+                <else>
+                    <if expression="a == b">
+                        <then>
+                            <assign variable="x" expression="0"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="a"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

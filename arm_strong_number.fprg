@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-27 10:31:35 PM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjM2OjUzIFBNOzMzNjY="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzEwOjA2OjM3IFBNOzE7cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjI3OjQzIFBNO2xpYnJhcnkuZnByZzs4MTgy"/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzEwOjMxOjM1IFBNOzU7MzQ2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, nRaisedSum, num, digit, length, i, originalNum" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="1634"/>
+            <assign variable="originalNum" expression="num"/>
+            <assign variable="length" expression="lenNum(num)"/>
+            <assign variable="nRaisedSum" expression="0"/>
+            <for variable="i" start="0" end="length" direction="inc" step="1">
+                <assign variable="digit" expression="num % 10"/>
+                <assign variable="nRaisedSum" expression="nRaisedSum + digit^length"/>
+                <assign variable="num" expression="num / 10"/>
+            </for>
+            <output expression="nRaisedSum" newline="True"/>
+            <if expression="nRaisedSum == originalNum">
+                <then>
+                    <output expression="&quot;The number is armstrong&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The number is not armstrong&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="lenNum" type="Integer" variable="length">
+        <parameters>
+            <parameter name="num" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="length, count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <while expression="num &gt; 0">
+                <assign variable="num" expression="num / 10"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+            <assign variable="length" expression="count"/>
+        </body>
+    </function>
+</flowgorithm>

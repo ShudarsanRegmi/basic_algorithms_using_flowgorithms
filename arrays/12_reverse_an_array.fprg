@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 05:20:20 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjUxOjE0IEFNOzMzNDE="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA1OjIwOjIwIEFNOzM7MzQ0NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastIndex, i, temp" type="Integer" array="False" size=""/>
+            <assign variable="lastIndex" expression="10"/>
+            <declare name="arr" type="Integer" array="True" size="lastIndex+1"/>
+            <for variable="i" start="0" end="lastIndex" direction="inc" step="1">
+                <assign variable="arr[i]" expression="i+1"/>
+            </for>
+            <for variable="i" start="0" end="lastIndex/2" direction="inc" step="1">
+                <assign variable="temp" expression="arr[i]"/>
+                <assign variable="arr[i]" expression="arr[lastIndex-i]"/>
+                <assign variable="arr[lastIndex-i]" expression="temp"/>
+            </for>
+            <output expression="&quot;Displaying reversed array&quot;" newline="True"/>
+            <for variable="i" start="0" end="lastIndex" direction="inc" step="1">
+                <output expression="arr[i] &amp; &quot; &quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

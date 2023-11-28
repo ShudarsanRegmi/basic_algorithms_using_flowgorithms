@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 08:19:30 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA3OjM5OjEwIEFNOzMzNDY="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA4OjE5OjMwIEFNOzQ7MzQ1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="binarr" type="Integer" array="True" size="32"/>
+            <declare name="num, i, digit, count" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="15"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <while expression="!(num == 0 || num == 1)">
+                <assign variable="digit" expression="num % 2"/>
+                <assign variable="count" expression="count + 1"/>
+                <assign variable="binarr[i]" expression="digit"/>
+                <assign variable="num" expression="num /2"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <assign variable="binarr[count]" expression="num"/>
+            <for variable="i" start="count" end="0" direction="dec" step="1">
+                <output expression="binarr[i]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

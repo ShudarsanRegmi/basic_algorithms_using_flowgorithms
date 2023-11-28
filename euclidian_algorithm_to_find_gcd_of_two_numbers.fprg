@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="shudarsan"/>
+        <attribute name="about" value="This flowchart was designed by shudarsan regmi using euclidean algoriothm. "/>
+        <attribute name="saved" value="2023-11-27 09:07:44 PM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA4OjQ2OjEyIFBNOzMzNjE="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI3OzA5OjA3OjQ0IFBNOzU7MzQ3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, hcf" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="10"/>
+            <assign variable="b" expression="20"/>
+            <assign variable="hcf" expression="gcd(a,b)"/>
+            <output expression="&quot;GCD = &quot; &amp; hcf" newline="True"/>
+        </body>
+    </function>
+    <function name="gcd" type="Integer" variable="x">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <if expression="a == 0">
+                <then>
+                    <assign variable="x" expression="b"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="b == 0">
+                <then>
+                    <assign variable="x" expression="a"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="a &gt; b">
+                <then>
+                    <assign variable="x" expression="gcd(a-b,b)"/>
+                </then>
+                <else>
+                    <if expression="a == b">
+                        <then>
+                            <assign variable="x" expression="a"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="gcd(a,b-a)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

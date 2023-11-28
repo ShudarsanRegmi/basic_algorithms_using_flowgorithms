@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="priyanshu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 03:40:35 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjI5OjM5IEFNOzMzNTI="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjQwOjM1IEFNOzI7MzQ1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="True" size="20"/>
+            <declare name="naam" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <input variable="naam"/>
+            <for variable="i" start="0" end="len(naam)-1" direction="inc" step="1">
+                <assign variable="name[i]" expression="char(naam,i)"/>
+            </for>
+            <output expression="&quot;The name is &quot;" newline="True"/>
+            <for variable="i" start="0" end="len(naam)-1" direction="inc" step="1">
+                <output expression="name[i]" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

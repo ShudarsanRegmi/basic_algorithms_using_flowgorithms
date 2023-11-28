@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Shudarsan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-28 04:04:54 AM"/>
+        <attribute name="created" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzAzOjQ3OjU5IEFNOzMzNTQ="/>
+        <attribute name="edited" value="cHJpeWFuc2h1O0xBUFRPUC1GVkZQMUJJUDsyMDIzLTExLTI4OzA0OjA0OjU0IEFNOzY7MzQ1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arr" type="Integer" array="True" size="10"/>
+            <declare name="i, repIndex, newVal" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="arr[i]" expression="i^2"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="arr[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Enter the index where you want to replace&quot;" newline="True"/>
+            <input variable="repIndex"/>
+            <output expression="&quot;Enter the new value&quot;" newline="True"/>
+            <input variable="newVal"/>
+            <assign variable="arr[repIndex]" expression="newVal"/>
+            <output expression="&quot;Displaying array&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="arr[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
